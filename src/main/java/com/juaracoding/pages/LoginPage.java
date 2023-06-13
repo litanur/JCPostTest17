@@ -19,11 +19,24 @@ public class LoginPage {
     WebElement password;
     @FindBy(xpath = "//button[@name='login']")
     WebElement btnLogin;
-
+    @FindBy(xpath = "//a[normalize-space()='Dashboard']")
+    WebElement txtDashboard;
+    @FindBy(xpath = "//strong[normalize-space()='ERROR']")
+    WebElement txtErrorLogin;
+    @FindBy(xpath = "//a[normalize-space()='Log out']")
+    WebElement btnLogout;
     public void login(String username, String password){
         this.username.sendKeys(username);
         this.password.sendKeys(password);
         btnLogin.click();
     }
-
+    public String getTextDashboard(){
+        return txtDashboard.getText();
+    }
+    public String getErrorAccount(){
+        return txtErrorLogin.getText();
+    }
+    public void logout(){
+        btnLogout.click();
+    }
 }

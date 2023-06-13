@@ -15,7 +15,15 @@ public class CartPage {
 
     @FindBy(xpath = "//a[normalize-space()='View cart']")
     WebElement cart;
+
+    @FindBy(className = "empty-cart")
+    WebElement clearCart;
+
     public void showCart(){
         cart.click();
+    }
+
+    public String cartNotEmpty(){
+        return clearCart.getText();
     }
 }

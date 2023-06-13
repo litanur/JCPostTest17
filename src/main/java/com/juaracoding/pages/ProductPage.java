@@ -26,6 +26,10 @@ public class ProductPage {
 
     @FindBy(xpath = "//button[normalize-space()='Add to cart']")
     WebElement addToCart;
+
+    @FindBy(xpath = "//a[normalize-space()='View cart']")
+    WebElement txtCart;
+
     public void product(String color, String size){
         driver.get("https://shop.demoqa.com/shop");
         chooseProduct.click();
@@ -36,5 +40,9 @@ public class ProductPage {
         selectSize.selectByVisibleText(size);
         selectSize.getFirstSelectedOption().getText();
         addToCart.click();
+    }
+
+    public String viewCart(){
+        return txtCart.getText();
     }
 }
