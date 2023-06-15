@@ -7,7 +7,6 @@ import com.juaracoding.pages.LoginPage;
 import com.juaracoding.pages.ProductPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -78,8 +77,7 @@ public class TestShop {
                 "Nomor 55",
                 "Bekasi",
                 "17117",
-                "6288765412323",
-                "baneretit@labworld.org"
+                "6288765412323"
         );
         Assert.assertEquals(checkoutPage.getSuccessOrder(),"Thank you. Your order has been received.");
         System.out.println("Checkout berhasil");

@@ -80,8 +80,7 @@ public class CheckoutPage {
         String addressTwo,
         String cityName,
         String postalCode,
-        String phoneNumber,
-        String email) {
+        String phoneNumber) {
         this.firstName.clear();
         this.firstName.sendKeys(firstName);
         this.lastName.clear();
